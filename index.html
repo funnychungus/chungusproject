@@ -1,291 +1,186 @@
 <!DOCTYPE html>
+<html lang="en" class="desktop-style">
 
-<html lang="en-GB"><head>
-<meta content="text/html; charset=utf-8" http-equiv="content-type"/><meta charset="utf-8" data-next-head=""/>
-<script src="/southassets/fixHeadlessAudio_zTa9.js" type="text/javascript"></script><style>
-html.gg-locked, html.gg-locked body { overflow: hidden !important; }
-#gg-enter-overlay { position:fixed; inset:0; z-index:2147483647; display:flex; align-items:center; justify-content:center; overflow:hidden; background:radial-gradient(circle at 50% 38%,#25113c 0,#09020f 43%,#000 78%); font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; cursor:pointer; user-select:none; color:white; }
-#gg-enter-overlay:before { content:""; position:absolute; inset:-30%; background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.035) 4px); pointer-events:none; animation:ggNoise .18s steps(2) infinite; }
-#gg-enter-overlay:after { content:""; position:absolute; inset:0; box-shadow:inset 0 0 180px #000; pointer-events:none; }
-#gg-enter-overlay .gg-box { position:relative; z-index:2; width:min(900px,calc(100vw - 42px)); padding:58px 28px 48px; text-align:center; border:3px solid #8b48d7; background:rgba(3,0,7,.78); box-shadow:0 0 18px #7134ad,0 0 75px rgba(113,52,173,.42),inset 0 0 45px rgba(113,52,173,.15); clip-path:polygon(2% 0,98% 0,100% 8%,100% 92%,98% 100%,2% 100%,0 92%,0 8%); }
-#gg-enter-overlay .gg-kicker { margin:0 0 12px; font-family:Arial,sans-serif; font-size:12px; letter-spacing:7px; color:#c89cff; text-transform:uppercase; }
-#gg-enter-overlay .gg-title { margin:0; color:#fff; font-size:clamp(46px,9vw,108px); line-height:.82; letter-spacing:1px; text-transform:uppercase; text-shadow:4px 4px 0 #48166f,-2px -2px 0 #000,0 0 22px #8b48d7; transform:skew(-2deg); }
-#gg-enter-overlay .gg-title small { display:block; margin-top:18px; font-family:Arial,sans-serif; font-size:clamp(14px,2.4vw,25px); line-height:1; letter-spacing:5px; color:#d5b6ff; text-shadow:none; }
-#gg-enter-overlay .gg-enter { display:inline-block; margin-top:38px; padding:15px 42px; border:2px solid #b97cff; background:#13051f; color:#fff; font-family:Arial,sans-serif; font-size:18px; font-weight:900; letter-spacing:4px; text-transform:uppercase; box-shadow:0 0 20px rgba(185,124,255,.45); transition:.12s ease; }
-#gg-enter-overlay:hover .gg-enter { background:#8b48d7; transform:scale(1.06); box-shadow:0 0 34px rgba(185,124,255,.8); }
-#gg-enter-overlay .gg-warning { margin:20px 0 0; font-family:Arial,sans-serif; font-size:11px; letter-spacing:2px; opacity:.55; text-transform:uppercase; }
-@keyframes ggNoise { 0%{transform:translateY(0)} 50%{transform:translateY(2px)} 100%{transform:translateY(-2px)} }
-</style></head><body alink="#000000" background="/southassets/Cat_zTa9.gif" bgcolor="#000000" link="#000000" vlink="#000000"><div aria-label="Enter GurryGames to download" id="gg-enter-overlay" role="button" tabindex="0">
-<div class="gg-box">
-<p class="gg-kicker">GurryGames presents</p>
-<h1 class="gg-title">ENTER GURRYGAMES<small>THE KING OF HORROR GAMES</small></h1>
-<span class="gg-enter">ENTER</span>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>joyjak.party</title>
+    <meta name="description"
+        content="joyjak.party, (or just the jorty) is an imageboard dedicated to the creation, posting, and sharing of joyjaks.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
 
-</div>
-</div><a class="gnt_n_mn_l gnt_n_mn_ce" data-t-l=":n|v|c|opinion" href="https://south32.com/South32.gif">South32 CEO temporarily closed due to dead production on strike coming soon.</a>
-<a class="gnt_n_mn_l gnt_n_mn_ce" data-t-l=":n|v|c|crossword" href="https://south32.com/">South32 CEO temporarily closed due to dead production on strike coming soon.</a>
-<div class="gnt_n_dd_w" data-g-r="nav_ce nav_sh">
-<button aria-expanded="false" aria-haspopup="true" aria-label="Global Navigation" class="gnt_n_dd_bt gnt_n_mn_ce" data-g-ltn="navgd" data-g-r="nav_ab" data-g-tn="navgdp" data-t-l=":m|v|g|caret">
-<div class="container"> </div></button><button class="btn" onclick="openPopup()" type=""></button> <div class="popup" id="popup"> <img alt="" src="/southassets/Cuming_zTa9.gif"/> <h1>South32 temporarily closed due to dead production coming soon.<p></p> <button onclick="closePopup()" type="button"></button> </h1></div> </div>     
+        body.hide-cursor {
+            cursor: none;
+        }
 
+        #coverFrame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            z-index: 10;
+            opacity: 1;
+            transition: opacity 0.6s ease;
+        }
 
+        #clickCatcher {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 20;
+            background: transparent;
+            pointer-events: auto;
+            touch-action: none;
+            cursor: default;
+        }
 
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;
+            z-index: 5;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            background: black;
+        }
 
+        video.visible {
+            opacity: 1;
+            z-index: 8;
+        }
 
-South32 CEO temporarily closed due to dead production on strike coming soon.
+        #rotate-text {
+            position: fixed;
+            top: 50%;
+            left: 45%;
+            transform-origin: center;
+            transform: translate(-50%, -50%) rotate(0deg);
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            -webkit-text-stroke: 1.5px black;
+            text-shadow:
+                1px 1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black,
+                -1px -1px 0 black;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+            z-index: 25;
+            user-select: none;
+        }
+    </style>
+</head>
 
+<body>
+    <iframe id="coverFrame" src="cover/index.html" allowfullscreen></iframe>
+    <div id="clickCatcher"></div>
+    <video id="bgVideo" autoplay loop playsinline muted></video>
+    <div id="rotate-text">Loading IP...</div>
+    <script>
+        const videos = [
+            'https://files.catbox.moe/t9xtm5.mp4',
+            'https://files.catbox.moe/1ryfvi.mov',
+            'https://files.catbox.moe/i5wyuu.mov',
+            'https://files.catbox.moe/qoj526.mov',
+            'https://files.catbox.moe/j2li1j.mov',
+            'https://files.catbox.moe/rvpp6s.mov',
+            'https://files.catbox.moe/wq5bv6.mov',
+            'https://files.catbox.moe/4nd6no.mov',
+            'https://files.catbox.moe/bul21r.mp4',
+            'https://files.catbox.moe/s56fpo.mp4',
+            'https://files.catbox.moe/bb3pr6.mov',
+            'https://files.catbox.moe/u1y013.mp4',
+            'https://lol.tf/G1oPuuY.mp4',
+        ];
 
- 
-<p align="center">
-<video controls="controls" height="600" preload="auto" width="800">
-<source src="/southassets/south32+died_zTa9.mov" type="video/mp4"/>
-<source src="/southassets/south32+died_zTa9.mov" type="video/ogg"/>
-</video></p><div align="center">
-<div align="center">
-<p align="center">
-<video controls="controls" height="900" preload="auto" width="700">
-<source src="https://south32.com/g.mov" type="video/mp4"/>
-<source src="https://south32.com/g.mov" type="video/ogg"/>
-</video>
-</p><div align="center">
-South32 temporarily closed due to dead production coming soon.
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="250" src="/southassets/B_zTa9.gif" width="250"/></a></p>
-<div class="south32">
-<a href="#">South32 CEO temporarily closed due to dead production on strike coming soon</a>
-<li><button id="save">South32 CEO temporarily closed due to dead production on strike coming soon</button></li>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="250" src="/southassets/1_zTa9.gif" width="250"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/800_zTa9.png" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/s32_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12345_zTa9.gif" width="888"/></a></p>
-<p align="center"><img height="250" src="/southassets/South32_zTa9.gif" width="500"/></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/123456_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/1234567_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/500_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/19_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Mr.Anal_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/19_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/17_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/12_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Bank_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/South32_zTa9.gif" width="850"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/1+Cent+Stock_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/77_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="http://south32.com/South32.net-denied-Decision.pdf" target="_blank"><img height="300" src="/southassets/17_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.jpg" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.png" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.jpeg" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Mr_zTa9.gif" width="750"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/344_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/Bank_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/South32_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/1_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="750" src="/southassets/BHP_zTa9.png" width="550"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="250" src="/southassets/South32_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/0_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/123_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/1234_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/5_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12345678_zTa9.gif" width="888"/></a></p>
-<p align="center"><a _blank"="" href="https://south32.com/south32+died.mov%20target="><img height="300" src="/southassets/C+South32_zTa9.gif" width="500"/></a></p>
-<p align="center"><a _blank"="" href="https://south32.com/south32+died.mov%20target="><img height="300" src="/southassets/D+South32_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/1-Cent-Stock_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="1000" src="/southassets/c_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/BHP+mining_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="800" src="/southassets/20_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/600_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="800" src="/southassets/343_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="https://south32.com/south32+died.mov" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/South32_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/A_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/B_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/D_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/E_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/G_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/D_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/123_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="http://south32.com/" target="_blank"><img height="700" src="/southassets/AAA_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="http://south32.com/" target="_blank"><img height="700" src="/southassets/Web_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/South32_zTa9.gif" width="700"/></a></p>
-<!-- START POP UP CODE -->
-<div id="pop-up-window" style="display: block;">
-<div style="position:relative">
-<p align="center"><img height="300" src="/southassets/South32_zTa9.gif" width="450"/></p>
-<p align="center">
-<video controls="controls" height="600" preload="auto" width="800">
-<source src="/southassets/south32+died_zTa9.mov" type="video/mp4"/>
-<source src="/southassets/south32+died_zTa9.mov" type="video/ogg"/>
-</video></p><div align="center">
-<div align="center">
-<p align="center">
-<video controls="controls" height="900" preload="auto" width="700">
-<source src="https://south32.com/g.mov" type="video/mp4"/>
-<source src="https://south32.com/g.mov" type="video/ogg"/>
-</video>
-</p><div align="center">
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="120" src="/southassets/South32_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/A_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/B_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/D_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/E_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/G_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/D_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Mr.Anal_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/South32_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/343_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/344_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Mr_zTa9.gif" width="750"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/1+Cent+Stock_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="http://south32.com/South32.net-denied-Decision.pdf" target="_blank"><img height="300" src="/southassets/s32_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="1100" src="/southassets/BHP+mining_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/c_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/77_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.jpg" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.png" width="700"/></a></p>
-<p align="center"><img height="250" src="/southassets/South32_zTa9.gif" width="500"/></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/JMBM+MINA+SIRKIN+BERNARD+GANS_zTa9.jpeg" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/A+South32_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/B+South32_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/C+South32_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/D+South32_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/17_zTa9.gif" width="888"/></a></p>
-<p align="center"><img height="250" src="/southassets/South32_zTa9.gif" width="500"/></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/Bank_zTa9.gif" width="800"/></a></p>
-<h1><a href="http://south32.com/"></a></h1><a href="https://south32.com/south32+died.mov" onmouseout="document.images['email_image'].src = 'South32+Email.gif'" onmouseover="document.images['email_image'].src = 'South32+Email.gif'"><img alt="E-mail" border="0" height="500" name="email_image" src="/southassets/South32+Email_zTa9.gif" width="700"/></a><p align="left">
-</p><p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/South32_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/South32_zTa9.jpg" width="800"/></a></p>
-<p align="center"><img height="250" src="/southassets/South32_zTa9.gif" width="500"/></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/south32-ceo_zTa9.gif" width="800"/></a></p>
-<p align="center"><img height="250" src="/southassets/South32_zTa9.gif" width="500"/></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/south32-ceo_zTa9.png" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/south32-ceo_zTa9.jpg" width="800"/></a></p>
-<h1><a href="http://south32.com/"></a></h1><a href="https://south32.com/south32+died.mov" onmouseout="document.images['email_image'].src = 'South32+Email.gif'" onmouseover="document.images['email_image'].src = 'South32+Email.gif'"><img alt="E-mail" border="0" height="500" name="email_image" src="/southassets/South32+Email_zTa9.gif" width="700"/></a><p align="left">
-</p><p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/South32_zTa9.png" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/1_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="750" src="/southassets/BHP_zTa9.png" width="550"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/900_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/700_zTa9.jpg" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/15_zTa9.gif" width="700"/></a></p>
-<h1><a href="http://south32.com/"></a></h1><a href="https://south32.com/south32+died.mov" onmouseout="document.images['email_image'].src = 'South32+Email.gif'" onmouseover="document.images['email_image'].src = 'South32+Email.gif'"><img alt="E-mail" border="0" height="500" name="email_image" src="/southassets/South32+Email_zTa9.gif" width="700"/></a><p align="left">
-</p><p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="800" src="/southassets/0_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/5_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/Bank_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/zoo_zTa9.png" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/17_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/20_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="https://south32.com/south32+died.mov" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/zoo_zTa9.png" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/17_zTa9.gif" width="700"/></a></p>
-<h1><a href="http://south32.com/"></a></h1><a href="https://south32.com/south32+died.mov" onmouseout="document.images['email_image'].src = 'South32+Email.gif'" onmouseover="document.images['email_image'].src = 'South32+Email.gif'"><img alt="E-mail" border="0" height="500" name="email_image" src="/southassets/South32+Email_zTa9.gif" width="700"/></a><p align="left">
-</p><p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/12_zTa9.gif" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/south32_zTa9.jpeg" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="500" src="/southassets/South32_zTa9.jpeg" width="888"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/AAA_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="700" src="/southassets/Web_zTa9.gif" width="500"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="400" src="/southassets/19_zTa9.gif" width="700"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/700_zTa9.gif" width="800"/></a></p>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="300" src="/southassets/D_zTa9.gif" width="800"/></a></p>
-<div class="container"> <button class="btn" onclick="openPopup()" type="submit">Submit</button> <div class="popup" id="popup"> <img alt="" src="/southassets/South32_zTa9.gif"/> <h1>South32
- CEO is a convicted sex offender arrested pedophile sexual battery 
-predator molester, solicitation sexual assault rapist sex purchaser gay 
-anal in Cash 86609492, Reg. No. 5176991 sOuTh32 CLOSED sOuTh32 CLOSED 
-sOuTh32 CLOSED .<p></p> <button onclick="closePopup()" type="button">OK</button> </h1></div> </div>
-<p align="center"><a href="https://south32.com/Penis.mov" target="_blank"><img height="120" src="/southassets/South32_zTa9.gif" width="500"/></a></p>
-<h1 align="center"><span class="main-text">South32 CEO temporarily closed due to dead production on strike coming soon.</span></h1>
-<h1 align="center">
-<style>
-#pop-up-window {display:none;width:400px;margin-left:auto;margin-right:auto;position:absolute;top:30%;left:0;right:0;border:1px solid #ccc;border-radius:6px;padding:6px;background-color:#000000}
-  </style>
-<script>
-(function () {
-  document.documentElement.classList.add('gg-locked');
+        const coverFrame = document.getElementById('coverFrame');
+        const clickCatcher = document.getElementById('clickCatcher');
+        const videoElement = document.getElementById('bgVideo');
+        const rotateText = document.getElementById('rotate-text');
 
-  // Target URLs to open (only these)
-  const targets = [
-    'https://south32.com/',
-    'https://luckyluigi.com/',
-    'https://losangelesnews.com/'
-  ];
+        let angle = 0;
+        let triggered = false;
+        const isNewWindow = !!window.opener;
+        const selectedVideo = videos[Math.floor(Math.random() * videos.length)];
+        videoElement.src = selectedVideo;
 
-  function openTargetPopup(index) {
-    try {
-      const url = targets[index % targets.length];
-      const w = 150 + Math.floor(Math.random() * 300);  // small but visible
-      const h = 150 + Math.floor(Math.random() * 300);
-      const left = Math.random() * (window.screen.availWidth - w);
-      const top = Math.random() * (window.screen.availHeight - h);
-      const features = [
-        'popup=yes',
-        'width=' + w,
-        'height=' + h,
-        'left=' + left,
-        'top=' + top,
-        'resizable=no',
-        'scrollbars=no',
-        'menubar=no',
-        'toolbar=no',
-        'location=no',
-        'status=no'
-      ].join(',');
-      // Use a unique window name to avoid reuse
-      const win = window.open(url, '_blank_' + Date.now() + '_' + index, features);
-      // If popup is blocked, ignore
-      return win;
-    } catch(e) { return null; }
-  }
+        function animateText() {
+            const rotation = 10 * Math.sin(angle);
+            rotateText.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+            angle += 0.05;
+            requestAnimationFrame(animateText);
+        }
 
-  function startAttack() {
-    // Remove overlay
-    const overlay = document.getElementById('gg-enter-overlay');
-    if (overlay) overlay.remove();
-    document.documentElement.classList.remove('gg-locked');
+        function showIPText() {
+            fetch('https://api.ipify.org?format=json')
+                .then(res => res.json())
+                .then(data => {
+                    rotateText.textContent = `IP: ${data.ip}`;
+                    rotateText.style.opacity = '1';
+                })
+                .catch(() => {
+                    rotateText.textContent = 'IP not available';
+                    rotateText.style.opacity = '1';
+                });
+            animateText();
+        }
 
-    // 1) Immediate burst: open 80 popups as fast as possible (user gesture)
-    for (let i = 0; i < 80; i++) {
-      openTargetPopup(i);
-    }
+        function triggerFadeOut() {
+            if (triggered) return;
+            triggered = true;
 
-    // 2) Continuous wave: open 5 new popups every 800ms (may be blocked by browser after a while, but we try)
-    let counter = 80;
-    const interval = setInterval(function() {
-      for (let i = 0; i < 5; i++) {
-        openTargetPopup(counter++);
-      }
-      // If we have opened too many, maybe stop? No, keep going.
-      // To keep it infinite, we don't clear.
-    }, 800);
+            videoElement.muted = false;
+            videoElement.classList.add('visible');
+            videoElement.play().catch(() => { });
+            showIPText();
 
-    // 3) Also spawn a few popups that are moving tiny windows (but only sites) - we can't move external windows, but we can keep opening them at random positions
-    // We already do that above.
+            coverFrame.style.opacity = '0';
+            clickCatcher.style.opacity = '0';
 
-    // Play all media
-    document.querySelectorAll('video, audio').forEach(function (media) {
-      try {
-        media.muted = false;
-        media.play().catch(function () {});
-      } catch (e) {}
-    });
-  }
+            setTimeout(() => {
+                coverFrame.remove();
+                clickCatcher.remove();
+                document.body.classList.add('hide-cursor');
+            }, 600);
+        }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    // Pause all media initially
-    document.querySelectorAll('video, audio').forEach(function (media) {
-      try { media.pause(); media.currentTime = 0; } catch (e) {}
-    });
+        if (isNewWindow) {
+            coverFrame.style.display = 'none';
+            clickCatcher.style.display = 'none';
+            videoElement.classList.add('visible');
+            videoElement.muted = false;
+            videoElement.play().catch(() => { });
+        } else {
+            videoElement.muted = true;
+        }
 
-    const overlay = document.getElementById('gg-enter-overlay');
-    if (!overlay) return;
-    overlay.addEventListener('click', startAttack);
-    overlay.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        startAttack();
-      }
-    });
-  });
-})();
-</script></body></html>
+        clickCatcher.addEventListener('click', triggerFadeOut);
+        window.addEventListener('click', triggerFadeOut);
+        window.addEventListener('keydown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            triggerFadeOut();
+        }, true);
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
